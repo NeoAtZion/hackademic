@@ -22,7 +22,7 @@
 		/* If the user refreshed the page (keeping the GET vars), or came through the challenge page,
 		   just reset the session */
 		//} 
-		else if (isset($_GET['user']) && (isset($_SESSION['init_timer']))){
+		if (isset($_GET['user']) && (isset($_SESSION['init_timer']))){
 			unsetSession();
 		}
 		/* If he's not logged in to hackademic (session's not set), send him back to do so */
